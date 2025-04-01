@@ -11,7 +11,6 @@ app.register(transactionsRoutes, {
   prefix: 'transactions',
 })
 
-app
   .listen({
     port: env.PORT,
   })
