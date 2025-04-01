@@ -7,9 +7,10 @@ const app = fastify()
 
 app.register(coockie)
 
-app.register(transactionsRoutes, {
-  prefix: 'transactions',
-})
+app
+  .register(transactionsRoutes, {
+    prefix: 'transactions',
+  })
 
   .listen({
     port: env.PORT,
