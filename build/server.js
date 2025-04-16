@@ -5,6 +5,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
@@ -33,6 +34,7 @@ if (process.env.NODE_ENV === "test") {
 } else {
   (0, import_dotenv.config)();
 }
+
 var envSchema = import_zod.z.object({
   NODE_ENV: import_zod.z.enum(["development", "test", "production"]).default("production"),
   DATABASE_CLIENT: import_zod.z.enum(["sqlite", "pg"]).default("sqlite"),
